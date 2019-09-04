@@ -1,10 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Visa simulator</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+    <div id="setting">
+        <h3>Random persons setting</h3>
+        <hr>
+        <h4>Men:</h4>
+        <div class="data-input">
+            <label for="manMinAge">min age</label>
+            <input id="manMinAge" type="number" class="data-input__input data-input__input_number"
+                onkeypress="return false" min="1" max="99">
+        </div>
+        <div class="data-input">
+            <label for="manMaxAge">max age</label>
+            <input id="manMaxAge" type="number" class="data-input__input data-input__input_number"
+                onkeypress="return false" min="1" max="99">
+        </div>
+        <div class="data-input">
+            <label for="manMinBankAmount">min bank account</label>
+            <input id="manMinBankAmount" type="number" class="data-input__input data-input__input_amount"
+                 min="1" max="999999">
+        </div>
+        <div class="data-input">
+            <label for="manMaxBankAmount">max bank account</label>
+            <input id="manMaxBankAmount" type="number" class="data-input__input data-input__input_amount"
+                 min="1" max="999999">
+        </div>
+        <div class="data-input">
+            <label for="manMinHealth">min health</label>
+            <input id="manMinHealth" type="number" class="data-input__input data-input__input_number"
+                onkeypress="return false" min="0" max="100">
+        </div>
+        <div class="data-input">
+            <label for="manMaxHealth">max health</label>
+            <input id="manMaxHealth" type="number" class="data-input__input data-input__input_number"
+                onkeypress="return false" min="0" max="100">
+        </div>
+        <br>
+        <hr>
+        <h4>Women:</h4>
+        <div class="data-input">
+            <label for="womanMinAgeInput">min age</label>
+            <input id="womanMinAgeInput" type="number" class="data-input__input data-input__input_number"
+                onkeypress="return false" min="1" max="99">
+        </div>
+        <div class="data-input">
+            <label for="womanMaxAgeInput">max age</label>
+            <input id="womanMaxAgeInput" type="number" class="data-input__input data-input__input_number"
+                onkeypress="return false" min="1" max="99">
+        </div>
+        <div class="data-input">
+            <label for="womanMinBankAmount">min bank account</label>
+            <input id="womanMinBankAmount" type="number" class="data-input__input data-input__input_amount"
+                min="1" max="999999">
+        </div>
+        <div class="data-input">
+            <label for="womanMaxBankAmount">max bank account</label>
+            <input id="womanMaxBankAmount" type="number" class="data-input__input data-input__input_amount"
+                 min="1" max="999999">
+        </div>
+        <div class="data-input">
+            <label for="womanMinHealthInput">min health</label>
+            <input id="womanMinHealthInput" type="number" class="data-input__input data-input__input_number"
+                onkeypress="return false" min="0" max="100">
+        </div>
+        <div class="data-input">
+            <label for="womanMaxHealth">max health</label>
+            <input id="womanMaxHealth" type="number" class="data-input__input data-input__input_number"
+                onkeypress="return false" min="0" max="100">
+        </div>
+        <br>
+        <hr>
+        <button class="btn">GENERATE</button>
+        <button class="btn" id="openModal" style="position: relative; left:20px;">Add person</button>
+    </div>
+<div class="content">
+    <section class="person-data">
+        <div class="person-id person-id_woman">
+            <div class="wrapper-id">
+            <img src="./img/avatarWoman.png" alt="" class="img man">
+            <span class="person-id__name">First Name:</span> <br>
+            <span class="person-id__last-name">Last Name:</span><br>
+            <span class="person-id__age">Age:</span><br>
+            <span class="person-id__bank-account">Bank account:</span><br>
+            <span class ="person-id__Health">Health:</span><br>
+            <span class="person-id__pasport person-id__id">Has Pasport:</span><br>
+            <span class="person-id__id">ID:</span>
+            </div>
+        </div>
+        <div class="person-data__block">
+            <div class="title">Pasport</div>
+            <div class="chekpoint ">
+                <div>Name</div>
+                <div>LasrName</div>
+                <div>Gender</div>
+                <div>Age</div>
+            </div>
+
+        </div>
+        <div class="person-data__block">
+            <div class="title">Hospital</div>
+            <div class="chekpoint">
+                <div>Name</div>
+                <div>LasrName</div>
+                <div>Gender</div>
+                <div>Age</div>
+            </div>
+        </div>
+        <div class="person-data__block">
+            <div class="title">Bank</div>
+            <div class="chekpoint">
+                <div>Name</div>
+                <div>LasrName</div>
+                <div>Gender</div>
+                <div>Age</div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+</div>
+
+
+    <div id="validate">
+        <h3>Validate</h3>
+        <hr>
+        <h4>Men:</h4>
+        
+        <div class="data-input">
+            <label for="manMinAge1">min age</label>
+            <input id="manMinAge1" type="number" class="data-input__input data-input__input_number"
+                onkeypress="return false" min="1" max="99">
+        </div>
+        <div class="data-input">
+            <label for="manMaxAge1">max age</label>
+            <input id="manMaxAge1" type="number" class="data-input__input data-input__input_number"
+                onkeypress="return false" min="1" max="99">
+        </div>
+        <div class="data-input">
+            <label for="manMinBankAmount1">min bank account</label>
+            <input id="manMinBankAmount1" type="number" class="data-input__input data-input__input_amount"
+                onkeypress="return false" min="1" max="999999">
+        </div>
+        <div class="data-input">
+            <label for="manMaxBankAmount1">max bank account</label>
+            <input id="manMaxBankAmount1" type="number" class="data-input__input data-input__input_amount"
+                onkeypress="return false" min="1" max="999999">
+        </div>
+        <div class="data-input">
+            <label for="manMinHealth1">min health</label>
+            <input id="manMinHealth1" type="number" class="data-input__input data-input__input_number"
+                onkeypress="return false" min="0" max="100">
+        </div>
+        <div class="data-input">
+            <label for="manMaxHealth1">max health</label>
+            <input id="manMaxHealth1" type="number" class="data-input__input data-input__input_number"
+                onkeypress="return false" min="0" max="100">
+        </div>
+        <br>
+        <hr>
+        <h4>Women:</h4>
+        <div class="data-input">
+            <label for="womanMinAgeInput1">min age</label>
+            <input id="womanMinAgeInput1" type="number" class="data-input__input data-input__input_number"
+                onkeypress="return false" min="1" max="99">
+        </div>
+        <div class="data-input">
+            <label for="womanMaxAgeInput1">max age</label>
+            <input id="womanMaxAgeInput1" type="number" class="data-input__input data-input__input_number"
+                onkeypress="return false" min="1" max="99">
+        </div>
+        <div class="data-input">
+            <label for="womanMinBankAmount1">min bank account</label>
+            <input id="womanMinBankAmount1" type="number" class="data-input__input data-input__input_amount"
+                onkeypress="return false" min="1" max="999999">
+        </div>
+        <div class="data-input">
+            <label for="womanMaxBankAmount1">max bank account</label>
+            <input id="womanMaxBankAmount1" type="number" class="data-input__input data-input__input_amount"
+                onkeypress="return false" min="1" max="999999">
+        </div>
+        <div class="data-input">
+            <label for="womanMinHealthInput1">min health</label>
+            <input id="womanMinHealthInput1" type="number" class="data-input__input data-input__input_number"
+                onkeypress="return false" min="0" max="100">
+        </div>
+        <div class="data-input">
+            <label for="womanMaxHealth1">max health</label>
+            <input id="womanMaxHealth1" type="number" class="data-input__input data-input__input_number"
+                onkeypress="return false" min="0" max="100">
+        </div>
+        <br>
+        <hr>
+        <button class="btn">GENERATE</button>
+    </div>
+
+   
+
+    <div id="modal" class="visible"> </div>
+
+    <div class="addPersonForm visible">
+        <img src="img/крестик.png" alt="" class="cross">
+        <img src="img/avatar.png" alt="" class="img">
+
+        <h3 class="modal-title">Enter person details</h3>
+
+
+        <label for="name">Name</label><br>
+        <input type="text" id="name" maxlength="16" placeholder="Your name" class="input"><br>
+
+        <label for="lastName">Last name</label><br>
+        <input type="text" id="lastName" maxlength="16" placeholder="Your last name" class="input"><br>
+
+
+        <input id="man" type="radio" class="input input-radio" value="man" name="gender">
+        <label for="man">Man</label>
+
+        <input id="woman" type="radio" class="input input-radio" name="gender">
+        <label for="woman">Woman</label><br>
+
+
+        <input id="pasportYes" type="radio" class="input input-radio"  value="man" name="haspasport">
+        <label for="pasportYes">There is a passport</label>
+
+        <input id="PaspotNo" type="radio" class="input input-radio" name="haspasport">
+        <label for="PaspotNo">No passport</label><br>
+
+
+        <label for="age">Age</label>
+        <input id="age" type="number" class="input data-input__input_number" onkeypress="return false" max="99"><br>
+
+        <label for="amount">Bank Amount</label>
+        <input id="amount" type="number" class="input input_amount" min="1" max="1000000"><br>
+
+        <label for="health">Health Status</label>
+        <input id="health" type="number" class="input data-input__input_number" onkeypress="return false" max="99"><br>
+
+        <button class="btn" id="addPerson">OK</button>
+    </div>
+
+
+    <script src="./modalWindow.js"></script>
+    <script src="./main.js"></script>
 </body>
+
 </html>
