@@ -543,5 +543,601 @@ describe.only('Store parameters', () => {
         assert.equal(store._settings.womanMaxHealth, 999999999999999);
     });
 
+    it('Check getSettingManMinAge', () => {
+        store.setValidatorManMinAge(21);
+        assert.equal(store._validator.manMinAge, store.getSettingsManMinAge());
 
+        store.setValidatorManMinAge(96);
+        assert.equal(store._validator.manMinAge, store.getSettingsManMinAge());
+
+        store.setValidatorManMinAge(-1);
+        assert.equal(store._validator.manMinAge, store.getSettingsManMinAge());
+
+        store.setValidatorManMinAge(-0.5);
+        assert.equal(store._validator.manMinAge, store.getSettingsManMinAge());
+
+        store.setValidatorManMinAge(null);
+        assert.equal(store._validator.manMinAge, store.getSettingsManMinAge());
+
+        store.setValidatorManMinAge(undefined);
+        assert.equal(store._validator.manMinAge, store.getSettingsManMinAge());
+
+        store.setValidatorManMinAge(999999999999999);
+        assert.equal(store._validator.manMinAge, store.getSettingsManMinAge());
+    });
+
+    it('Check getSettingsManMaxAge', () => {
+        store.setValidatorManMaxAge(21);
+        assert.equal(store._validator.manMaxAge, store.getSettingsManMaxAge());
+
+        store.setValidatorManMaxAge(96);
+        assert.equal(store._validator.manMaxAge, store.getSettingsManMaxAge());
+
+        store.setValidatorManMaxAge(-1);
+        assert.equal(store._validator.manMaxAge, store.getSettingsManMaxAge());
+
+        store.setValidatorManMaxAge(-0.5);
+        assert.equal(store._validator.manMaxAge, store.getSettingsManMaxAge());
+
+        store.setValidatorManMaxAge(null);
+        assert.equal(store._validator.manMaxAge, store.getSettingsManMaxAge());
+
+        store.setValidatorManMaxAge(undefined);
+        assert.equal(store._validator.manMaxAge, store.getSettingsManMaxAge());
+
+        store.setValidatorManMaxAge(999999999999999);
+        assert.equal(store._validator.manMaxAge, store.getSettingsManMaxAge());
+    });
+
+    it('Check getSettingsManMinBankAmount', () => {
+        store.setValidatorManMinBankAmount(21);
+        assert.equal(store._validator.manMinBankAmount, store.getSettingsManMinBankAmount());
+
+        store.setValidatorManMinBankAmount(96);
+        assert.equal(store._validator.manMinBankAmount, store.getSettingsManMinBankAmount());
+
+        store.setValidatorManMinBankAmount(-1);
+        assert.equal(store._validator.manMinBankAmount, store.getSettingsManMinBankAmount());
+
+        store.setValidatorManMinBankAmount(-0.5);
+        assert.equal(store._validator.manMinBankAmount, store.getSettingsManMinBankAmount());
+
+        store.setValidatorManMinBankAmount(null);
+        assert.equal(store._validator.manMinBankAmount, store.getSettingsManMinBankAmount());
+
+        store.setValidatorManMinBankAmount(undefined);
+        assert.equal(store._validator.manMinBankAmount, store.getSettingsManMinBankAmount());
+
+        store.setValidatorManMinBankAmount(999999999999999);
+        assert.equal(store._validator.manMinBankAmount, store.getSettingsManMinBankAmount());
+    });
+
+    it('Check getSettingsManMaxBankAmount', () => {
+        store.setSettingsManMaxBankAmount(21);
+        assert.equal(store._validator.manMaxBankAmount, store.getSettingsManMaxBankAmount());
+
+        store.setSettingsManMaxBankAmount(96);
+        assert.equal(store._validator.manMaxBankAmount, store.getSettingsManMaxBankAmount());
+
+        store.setSettingsManMaxBankAmount(-1);
+        assert.equal(store._validator.manMaxBankAmount, store.getSettingsManMaxBankAmount());
+
+        store.setSettingsManMaxBankAmount(-0.5);
+        assert.equal(store._validator.manMaxBankAmount, store.getSettingsManMaxBankAmount());
+
+        store.setSettingsManMaxBankAmount(null);
+        assert.equal(store._validator.manMaxBankAmount, store.getSettingsManMaxBankAmount());
+
+        store.setSettingsManMaxBankAmount(undefined);
+        assert.equal(store._validator.manMaxBankAmount, store.getSettingsManMaxBankAmount());
+
+        store.setSettingsManMaxBankAmount(999999999999999);
+        assert.equal(store._validator.manMaxBankAmount, store.getSettingsManMaxBankAmount());
+    });
+
+    it('Check getSettingsManMinHealth', () => {
+        store.setValidatorManMinHealth(21);
+        assert.equal(store._validator.manMinHealth, store.getSettingsManMinHealth());
+
+        store.setValidatorManMinHealth(96);
+        assert.equal(store._validator.manMinHealth, store.getSettingsManMinHealth());
+
+        store.setValidatorManMinHealth(-1);
+        assert.equal(store._validator.manMinHealth, store.getSettingsManMinHealth());
+
+        store.setValidatorManMinHealth(-0.5);
+        assert.equal(store._validator.manMinHealth, store.getSettingsManMinHealth());
+
+        store.setValidatorManMinHealth(null);
+        assert.equal(store._validator.manMinHealth, store.getSettingsManMinHealth());
+
+        store.setValidatorManMinHealth(undefined);
+        assert.equal(store._validator.manMinHealth, store.getSettingsManMinHealth());
+
+        store.setValidatorManMinHealth(999999999999999);
+        assert.equal(store._validator.manMinHealth, store.getSettingsManMinHealth());
+    });
+
+    it('Check getSettingsManMaxHealth', () => {
+        store.setSettingsManMaxHealth(21);
+        assert.equal(store._validator.manMaxHealth, store.getSettingsManMaxHealth());
+
+        store.setSettingsManMaxHealth(96);
+        assert.equal(store._validator.manMaxHealth, store.getSettingsManMaxHealth());
+
+        store.setSettingsManMaxHealth(-1);
+        assert.equal(store._validator.manMaxHealth, store.getSettingsManMaxHealth());
+
+        store.setSettingsManMaxHealth(-0.5);
+        assert.equal(store._validator.manMaxHealth, store.getSettingsManMaxHealth());
+
+        store.setSettingsManMaxHealth(null);
+        assert.equal(store._validator.manMaxHealth, store.getSettingsManMaxHealth());
+
+        store.setSettingsManMaxHealth(undefined);
+        assert.equal(store._validator.manMaxHealth, store.getSettingsManMaxHealth());
+
+        store.setSettingsManMaxHealth(999999999999999);
+        assert.equal(store._validator.manMaxHealth, store.getSettingsManMaxHealth());
+    });
+
+    it('Check getSettingsWomanMinAge', () => {
+        store.setSettingsWomanMinAge(21);
+        assert.equal(store._validator.womanMaxAge, store.getSettingsWomanMaxAge());
+
+        store.setSettingsWomanMinAge(96);
+        assert.equal(store._validator.womanMaxAge, store.getSettingsWomanMaxAge());
+
+        store.setSettingsWomanMinAge(-1);
+        assert.equal(store._validator.womanMaxAge, store.getSettingsWomanMaxAge());
+
+        store.setSettingsWomanMinAge(-0.5);
+        assert.equal(store._validator.womanMaxAge, store.getSettingsWomanMaxAge());
+
+        store.setSettingsWomanMinAge(null);
+        assert.equal(store._validator.womanMaxAge, store.getSettingsWomanMaxAge());
+
+        store.setSettingsWomanMinAge(undefined);
+        assert.equal(store._validator.womanMaxAge, store.getSettingsWomanMaxAge());
+
+        store.setSettingsWomanMinAge(999999999999999);
+        assert.equal(store._validator.womanMaxAge, store.getSettingsWomanMaxAge());
+    });
+
+    it('Check getSettingsWomanMinBankAmount', () => {
+        store.setSettingsWomanMinBankAmount(21);
+        assert.equal(store._validator.womanMinBankAmount, store.getSettingsWomanMinBankAmount());
+
+        store.setSettingsWomanMinBankAmount(96);
+        assert.equal(store._validator.womanMinBankAmount, store.getSettingsWomanMinBankAmount());
+
+        store.setSettingsWomanMinBankAmount(-1);
+        assert.equal(store._validator.womanMinBankAmount, store.getSettingsWomanMinBankAmount());
+
+        store.setSettingsWomanMinBankAmount(-0.5);
+        assert.equal(store._validator.womanMinBankAmount, store.getSettingsWomanMinBankAmount());
+
+        store.setSettingsWomanMinBankAmount(null);
+        assert.equal(store._validator.womanMinBankAmount, store.getSettingsWomanMinBankAmount());
+
+        store.setSettingsWomanMinBankAmount(undefined);
+        assert.equal(store._validator.womanMinBankAmount, store.getSettingsWomanMinBankAmount());
+
+        store.setSettingsWomanMinBankAmount(999999999999999);
+        assert.equal(store._validator.womanMinBankAmount, store.getSettingsWomanMinBankAmount());
+    });
+
+    it('Check getSettingsWomanMinAge', () => {
+        store.setSettingsWomanMinAge(21);
+        assert.equal(store._validator.womanMinAgeInput, store.getSettingsWomanMinAge());
+
+        store.setSettingsWomanMinAge(96);
+        assert.equal(store._validator.womanMinAgeInput, store.getSettingsWomanMinAge());
+
+        store.setSettingsWomanMinAge(-1);
+        assert.equal(store._validator.womanMinAgeInput, store.getSettingsWomanMinAge());
+
+        store.setSettingsWomanMinAge(-0.5);
+        assert.equal(store._validator.womanMinAgeInput, store.getSettingsWomanMinAge());
+
+        store.setSettingsWomanMinAge(null);
+        assert.equal(store._validator.womanMinAgeInput, store.getSettingsWomanMinAge());
+
+        store.setSettingsWomanMinAge(undefined);
+        assert.equal(store._validator.womanMinAgeInput, store.getSettingsWomanMinAge());
+
+        store.setSettingsWomanMinAge(999999999999999);
+        assert.equal(store._validator.womanMinAgeInput, store.getSettingsWomanMinAge());
+    });
+
+    it('Check getSettingsWomanMaxBankAmount', () => {
+        store.setSettingsWomanMaxBankAmount(21);
+        assert.equal(store._validator.womanMaxBankAmount, store.getSettingsWomanMaxBankAmount());
+
+        store.setSettingsWomanMaxBankAmount(96);
+        assert.equal(store._validator.womanMaxBankAmount, store.getSettingsWomanMaxBankAmount());
+
+        store.setSettingsWomanMaxBankAmount(-1);
+        assert.equal(store._validator.womanMaxBankAmount, store.getSettingsWomanMaxBankAmount());
+
+        store.setSettingsWomanMaxBankAmount(-0.5);
+        assert.equal(store._validator.womanMaxBankAmount, store.getSettingsWomanMaxBankAmount());
+
+        store.setSettingsWomanMaxBankAmount(null);
+        assert.equal(store._validator.womanMaxBankAmount, store.getSettingsWomanMaxBankAmount());
+
+        store.setSettingsWomanMaxBankAmount(undefined);
+        assert.equal(store._validator.womanMaxBankAmount, store.getSettingsWomanMaxBankAmount());
+
+        store.setSettingsWomanMaxBankAmount(999999999999999);
+        assert.equal(store._validator.womanMaxBankAmount, store.getSettingsWomanMaxBankAmount());
+    });
+
+    it('Check getSettingsWomanMinHealth', () => {
+        store.setSettingsWomanMinHealth(21);
+        assert.equal(store._validator.womanMinHealthInput, store.getSettingsWomanMinHealth());
+
+        store.setSettingsWomanMinHealth(96);
+        assert.equal(store._validator.womanMinHealthInput, store.getSettingsWomanMinHealth());
+
+        store.setSettingsWomanMinHealth(-1);
+        assert.equal(store._validator.womanMinHealthInput, store.getSettingsWomanMinHealth());
+
+        store.setSettingsWomanMinHealth(-0.5);
+        assert.equal(store._validator.womanMinHealthInput, store.getSettingsWomanMinHealth());
+
+        store.setSettingsWomanMinHealth(null);
+        assert.equal(store._validator.womanMinHealthInput, store.getSettingsWomanMinHealth());
+
+        store.setSettingsWomanMinHealth(undefined);
+        assert.equal(store._validator.womanMinHealthInput, store.getSettingsWomanMinHealth());
+
+        store.setSettingsWomanMinHealth(999999999999999);
+        assert.equal(store._validator.womanMinHealthInput, store.setSettingsWomanMinHealth());
+    });
+
+    it('Check getSettingsWomanMaxHealth', () => {
+        store.setSettingsWomanMaxHealth(21);
+        assert.equal(store._validator.womanMaxHealth, store.getSettingsWomanMaxHealth());
+
+        store.setSettingsWomanMaxHealth(96);
+        assert.equal(store._validator.womanMaxHealth, store.getSettingsWomanMaxHealth());
+
+        store.setSettingsWomanMaxHealth(-1);
+        assert.equal(store._validator.womanMaxHealth, store.getSettingsWomanMaxHealth());
+
+        store.setSettingsWomanMaxHealth(-0.5);
+        assert.equal(store._validator.womanMaxHealth, store.getSettingsWomanMaxHealth());
+
+        store.setSettingsWomanMaxHealth(null);
+        assert.equal(store._validator.womanMaxHealth, store.getSettingsWomanMaxHealth());
+
+        store.setSettingsWomanMaxHealth(undefined);
+        assert.equal(store._validator.womanMaxHealth, store.getSettingsWomanMaxHealth());
+
+        store.setSettingsWomanMaxHealth(999999999999999);
+        assert.equal(store._validator.womanMaxHealth, store.getSettingsWomanMaxHealth());
+    });
+
+    it('Check getValidatorManMinAge', () => {
+        store.setValidatorManMinAge(21);
+        assert.equal(store._validator.manMinAge, store.getValidatorManMinAge());
+
+        store.setValidatorManMinAge(96);
+        assert.equal(store._validator.manMinAge, store.getValidatorManMinAge());
+
+        store.setValidatorManMinAge(-1);
+        assert.equal(store._validator.manMinAge, store.getValidatorManMinAge());
+
+        store.setValidatorManMinAge(-0.5);
+        assert.equal(store._validator.manMinAge, store.getValidatorManMinAge());
+
+        store.setValidatorManMinAge(null);
+        assert.equal(store._validator.manMinAge, store.getValidatorManMinAge());
+
+        store.setValidatorManMinAge(undefined);
+        assert.equal(store._validator.manMinAge, store.getValidatorManMinAge());
+
+        store.setValidatorManMinAge(999999999999999);
+        assert.equal(store._validator.manMinAge, store.getValidatorManMinAge());
+    });
+
+    it('Check getValidatorManMaxAge', () => {
+        store.setValidatorManMaxAge(21);
+        assert.equal(store._validator.manMaxAge, store.getValidatorManMaxAge());
+
+        store.setValidatorManMaxAge(96);
+        assert.equal(store._validator.manMaxAge, store.getValidatorManMaxAge());
+
+        store.setValidatorManMaxAge(-1);
+        assert.equal(store._validator.manMaxAge, store.getValidatorManMaxAge());
+
+        store.setValidatorManMaxAge(-0.5);
+        assert.equal(store._validator.manMaxAge, store.getValidatorManMaxAge());
+
+        store.setValidatorManMaxAge(null);
+        assert.equal(store._validator.manMaxAge, store.getValidatorManMaxAge());
+
+        store.setValidatorManMaxAge(undefined);
+        assert.equal(store._validator.manMaxAge, store.getValidatorManMaxAge());
+
+        store.setValidatorManMaxAge(999999999999999);
+        assert.equal(store._validator.manMaxAge, store.getValidatorManMaxAge());
+    });
+
+    it('Check getValidatorManMinBankAmount', () => {
+        store.setValidatorManMinBankAmount(21);
+        assert.equal(store._validator.manMinBankAmount, store.getValidatorManMinBankAmount());
+
+        store.setValidatorManMinBankAmount(96);
+        assert.equal(store._validator.manMinBankAmount, store.getValidatorManMinBankAmount());
+
+        store.setValidatorManMinBankAmount(-1);
+        assert.equal(store._validator.manMinBankAmount, store.getValidatorManMinBankAmount());
+
+        store.setValidatorManMinBankAmount(-0.5);
+        assert.equal(store._validator.manMinBankAmount, store.getValidatorManMinBankAmount());
+
+        store.setValidatorManMinBankAmount(null);
+        assert.equal(store._validator.manMinBankAmount, store.getValidatorManMinBankAmount());
+
+        store.setValidatorManMinBankAmount(undefined);
+        assert.equal(store._validator.manMinBankAmount, store.getValidatorManMinBankAmount());
+
+        store.setValidatorManMinBankAmount(999999999999999);
+        assert.equal(store._validator.manMinBankAmount, store.getValidatorManMinBankAmount());
+    });
+
+    it('Check getValidatorManMaxBankAmount', () => {
+        store.setValidatorManMaxBankAmount(21);
+        assert.equal(store._validator.womanMinAge, store.getValidatorManMaxBankAmount());
+
+        store.setValidatorManMaxBankAmount(96);
+        assert.equal(store._validator.womanMinAge, store.getValidatorManMaxBankAmount());
+
+        store.setValidatorManMaxBankAmount(-1);
+        assert.equal(store._validator.womanMinAge, store.getValidatorManMaxBankAmount());
+
+        store.setValidatorManMaxBankAmount(-0.5);
+        assert.equal(store._validator.womanMinAge, store.getValidatorManMaxBankAmount());
+
+        store.setValidatorManMaxBankAmount(null);
+        assert.equal(store._validator.womanMinAge, store.getValidatorManMaxBankAmount());
+
+        store.setValidatorManMaxBankAmount(undefined);
+        assert.equal(store._validator.womanMinAge, store.getValidatorManMaxBankAmount());
+
+        store.setValidatorManMaxBankAmount(999999999999999);
+        assert.equal(store._validator.womanMinAge, store.getValidatorManMaxBankAmount());
+    });
+
+    it('Check getValidatorManMinHealth', () => {
+        store.setValidatorManMinHealth(21);
+        assert.equal(store._validator.manMinHealth, store.getValidatorManMinHealth());
+
+        store.setValidatorManMinHealth(96);
+        assert.equal(store._validator.manMinHealth, store.getValidatorManMinHealth());
+
+        store.setValidatorManMinHealth(-1);
+        assert.equal(store._validator.manMinHealth, store.getValidatorManMinHealth());
+
+        store.setValidatorManMinHealth(-0.5);
+        assert.equal(store._validator.manMinHealth, store.getValidatorManMinHealth());
+
+        store.setValidatorManMinHealth(null);
+        assert.equal(store._validator.manMinHealth, store.getValidatorManMinHealth());
+
+        store.setValidatorManMinHealth(undefined);
+        assert.equal(store._validator.manMinHealth, store.getValidatorManMinHealth());
+
+        store.setValidatorManMinHealth(999999999999999);
+        assert.equal(store._validator.manMinHealth, store.getValidatorManMinHealth());
+    });
+
+    it('Check getValidatorManMaxHealth', () => {
+        store.setValidatorManMaxHealth(21);
+        assert.equal(store._validator.manMaxHealth, store.getValidatorManMaxHealth());
+
+        store.setValidatorManMaxHealth(96);
+        assert.equal(store._validator.manMaxHealth, store.getValidatorManMaxHealth());
+
+        store.setValidatorManMaxHealth(-1);
+        assert.equal(store._validator.manMaxHealth, store.getValidatorManMaxHealth());
+
+        store.setValidatorManMaxHealth(-0.5);
+        assert.equal(store._validator.manMaxHealth, store.getValidatorManMaxHealth());
+
+        store.setValidatorManMaxHealth(null);
+        assert.equal(store._validator.manMaxHealth, store.getValidatorManMaxHealth());
+
+        store.setValidatorManMaxHealth(undefined);
+        assert.equal(store._validator.manMaxHealth, store.getValidatorManMaxHealth());
+
+        store.setValidatorManMaxHealth(999999999999999);
+        assert.equal(store._validator.manMaxHealth, store.getValidatorManMaxHealth());
+    });
+
+    it('Check getValidatorWomanMinAge', () => {
+        store.setValidatorWomanMinAge(21);
+        assert.equal(store._validator.womanMinAge, store.getValidatorWomanMinAge());
+
+        store.setValidatorWomanMinAge(96);
+        assert.equal(store._validator.womanMinAge, store.getValidatorWomanMinAge());
+
+        store.setValidatorWomanMinAge(-1);
+        assert.equal(store._validator.womanMinAge, store.getValidatorWomanMinAge());
+
+        store.setValidatorWomanMinAge(-0.5);
+        assert.equal(store._validator.womanMinAge, store.getValidatorWomanMinAge());
+
+        store.setValidatorWomanMinAge(null);
+        assert.equal(store._validator.womanMinAge, store.getValidatorWomanMinAge());
+
+        store.setValidatorWomanMinAge(undefined);
+        assert.equal(store._validator.womanMinAge, store.getValidatorWomanMinAge());
+
+        store.setValidatorWomanMinAge(999999999999999);
+        assert.equal(store._validator.womanMinAge, store.getValidatorWomanMinAge());
+    });
+
+    it('Check getValidatorWomanMaxAge', () => {
+        store.setValidatorWomanMaxAge(21);
+        assert.equal(store._validator.womanMaxAge, store.getValidatorWomanMaxAge());
+
+        store.setValidatorWomanMaxAge(96);
+        assert.equal(store._validator.womanMaxAge, store.getValidatorWomanMaxAge());
+
+        store.setValidatorWomanMaxAge(-1);
+        assert.equal(store._validator.womanMaxAge, store.getValidatorWomanMaxAge());
+
+        store.setValidatorWomanMaxAge(-0.5);
+        assert.equal(store._validator.womanMaxAge, store.getValidatorWomanMaxAge());
+
+        store.setValidatorWomanMaxAge(null);
+        assert.equal(store._validator.womanMaxAge, store.getValidatorWomanMaxAge());
+
+        store.setValidatorWomanMaxAge(undefined);
+        assert.equal(store._validator.womanMaxAge, store.getValidatorWomanMaxAge());
+
+        store.setValidatorWomanMaxAge(999999999999999);
+        assert.equal(store._validator.womanMaxAge, store.getValidatorWomanMaxAge());
+    });
+
+    it('Check getValidatorWomanMinBankAmount', () => {
+        store.setValidatorWomanMinBankAmount(21);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(96);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(-1);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(-0.5);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(null);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(undefined);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(999999999999999);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+    });
+
+    it('Check getValidatorWomanMinBankAmount', () => {
+        store.setValidatorWomanMinBankAmount(21);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(96);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(-1);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(-0.5);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(null);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(undefined);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(999999999999999);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+    });
+
+    it('Check getValidatorWomanMinBankAmount', () => {
+        store.setValidatorWomanMinBankAmount(21);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(96);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(-1);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(-0.5);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(null);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(undefined);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+
+        store.setValidatorWomanMinBankAmount(999999999999999);
+        assert.equal(store._validator.womanMinBankAmount, store.getValidatorWomanMinBankAmount());
+    });
+
+    it('Check getValidatorWomanMinBankAmount', () => {
+        store.setValidatorWomanMaxBankAmount(21);
+        assert.equal(store._validator.womanMaxBankAmount, store.getValidatorWomanMaxBankAmount());
+
+        store.setValidatorWomanMaxBankAmount(96);
+        assert.equal(store._validator.womanMaxBankAmount, store.getValidatorWomanMaxBankAmount());
+
+        store.setValidatorWomanMaxBankAmount(-1);
+        assert.equal(store._validator.womanMaxBankAmount, store.getValidatorWomanMaxBankAmount());
+
+        store.setValidatorWomanMaxBankAmount(-0.5);
+        assert.equal(store._validator.womanMaxBankAmount, store.getValidatorWomanMaxBankAmount());
+
+        store.setValidatorWomanMaxBankAmount(null);
+        assert.equal(store._validator.womanMaxBankAmount, store.getValidatorWomanMaxBankAmount());
+
+        store.setValidatorWomanMaxBankAmount(undefined);
+        assert.equal(store._validator.womanMaxBankAmount, store.getValidatorWomanMaxBankAmount());
+
+        store.setValidatorWomanMaxBankAmount(999999999999999);
+        assert.equal(store._validator.womanMaxBankAmount, store.getValidatorWomanMaxBankAmount());
+    });
+
+    it('Check getValidatorWomanMinHealth', () => {
+        store.setValidatorWomanMinHealth(21);
+        assert.equal(store._validator.womanMinHealthInput, store.getValidatorWomanMinHealth());
+
+        store.setValidatorWomanMinHealth(96);
+        assert.equal(store._validator.womanMinHealthInput, store.getValidatorWomanMinHealth());
+
+        store.setValidatorWomanMinHealth(-1);
+        assert.equal(store._validator.womanMinHealthInput, store.getValidatorWomanMinHealth());
+
+        store.setValidatorWomanMinHealth(-0.5);
+        assert.equal(store._validator.womanMinHealthInput, store.getValidatorWomanMinHealth());
+
+        store.setValidatorWomanMinHealth(null);
+        assert.equal(store._validator.womanMinHealthInput, store.getValidatorWomanMinHealth());
+
+        store.setValidatorWomanMinHealth(undefined);
+        assert.equal(store._validator.womanMinHealthInput, store.getValidatorWomanMinHealth());
+
+        store.setValidatorWomanMinHealth(999999999999999);
+        assert.equal(store._validator.womanMinHealthInput, store.getValidatorWomanMinHealth());
+    });
+
+    it('Check getValidatorWomanMinHealth', () => {
+        store.setValidatorWomanMaxHealth(21);
+        assert.equal(store._validator.womanMaxHealth, store.getValidatorWomanMaxHealth());
+
+        store.setValidatorWomanMaxHealth(96);
+        assert.equal(store._validator.womanMaxHealth, store.getValidatorWomanMaxHealth());
+
+        store.setValidatorWomanMaxHealth(-1);
+        assert.equal(store._validator.womanMaxHealth, store.getValidatorWomanMaxHealth());
+
+        store.setValidatorWomanMaxHealth(-0.5);
+        assert.equal(store._validator.womanMaxHealth, store.getValidatorWomanMaxHealth());
+
+        store.setValidatorWomanMaxHealth(null);
+        assert.equal(store._validator.womanMaxHealth, store.getValidatorWomanMaxHealth());
+
+        store.setValidatorWomanMaxHealth(undefined);
+        assert.equal(store._validator.womanMaxHealth, store.getValidatorWomanMaxHealth());
+
+        store.setValidatorWomanMaxHealth(999999999999999);
+        assert.equal(store._validator.womanMaxHealth, store.getValidatorWomanMaxHealth());
+    });
 });
