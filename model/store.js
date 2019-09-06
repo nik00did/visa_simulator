@@ -41,7 +41,7 @@ class Store {
     }
 
     setValidator(obj) {
-        this._validator = Object.create(obj);
+        this._validator = obj;
     }
 
     getValidator() {

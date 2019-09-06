@@ -54,7 +54,7 @@ class View {
         if (person.gender === 'female') {
             return `<section class="person-data" id="${person.id}">
         <div class="person-id person-id_woman">
-            <img src="./img/avatarWoman.png" alt="" class="img man">
+            <img src="../img/avatarWoman.png" alt="" class="img man">
             <span class="person-id__name">Name: ${person.firstName}</span> <br>
             <span class="person-id__last-name">Last name: ${person.lastName}</span> <br>            
             <span class="person-id__age">Age: ${person.age}</span><br>
@@ -66,7 +66,7 @@ class View {
         <div class="person-data__block">
             <div class="title">Pasport</div>
             <div class="chekpoint ">
-                <div id="PasportAge${person.id}">Age</div>
+                <div id="PassportAge${person.id}">Age</div>
                 <div id="PassportHasPassport${person.id}">Has passport</div>
             </div>
         </div>
@@ -88,9 +88,9 @@ class View {
         </div>
             </section>`
         } else {
-            return `<section class="person-data">
+            return `<section class="person-data" id="${person.id}">
         <div class="person-id person-id_man">
-            <img src="./img/avatarMan.png" alt="" class="img man">
+            <img src="../img/avatarMan.png" alt="" class="img man">
            <span class="person-id__name">Name: ${person.firstName}</span> <br>
             <span class="person-id__last-name">Last name: ${person.lastName}</span> <br>           
             <span class="person-id__age">Age: ${person.age}</span><br>
@@ -102,7 +102,7 @@ class View {
         <div class="person-data__block">
             <div class="title">Pasport</div>
              <div class="chekpoint ">
-                <div id="PasportAge${person.id}">Age</div>
+                <div id="PassportAge${person.id}">Age</div>
                 <div id="PassportHasPassport${person.id}">Has passport</div>
             </div>
         </div>
