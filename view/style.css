@@ -1,12 +1,15 @@
 
 body{
-margin:0px;
-padding:0px;
-background-image:url(img/background.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-font-family: Arial, Helvetica, sans-serif;
-font-size:25px;
+    display: flex;
+    flex-direction: row;
+    margin:0px;
+    padding:0px;
+    background-image:url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:25px;
 
 }
 
@@ -14,16 +17,21 @@ h3{
     text-align: center;
     font-size:25px;
     text-transform: uppercase;
-  
+
 }
 
 .content{
-  position: relative;
-  top:20px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top:20px;
 }
 
 #setting{
     position:fixed;
+    z-index:100;
     background-color: #641818;
     color: white;
     /* min-width: 250px; */
@@ -34,7 +42,7 @@ h3{
 }
 #validate{
     position: fixed;
-   right:0;
+    right:0;
     background-color: #641818;
     color: white;
     /* min-width: 250px; */
@@ -46,7 +54,7 @@ h3{
 
 .data-input__input {
     background-color: #DCDCDC;
-   border:1px solid transparent;
+    border:1px solid transparent;
     outline: none;
     border-radius: 2px;
 }
@@ -65,24 +73,26 @@ h3{
 
 
 .person-data{
-    width: 65%;
+    width: 60%;
+    height: 115px;
     box-shadow:0 0 20px #000;
-    position:absolute;
-    left:50%;
+    position:relative;
+    left:30%;
+    right:20%;
     justify-content:space-between;
     transform:translate(-50%);
     display:flex;
-      
+
 }
 .person-data__block{
     display: inline-block;
-    width:27%;
-    
-   
+    width:22%;
     margin:0;
     padding:0;
+    height: 115px;
     display:flex;
     flex-direction: column;
+
 }
 
 .person-id{
@@ -91,55 +101,59 @@ h3{
 }
 
 .person-id_man {
-background-color:dodgerblue;
- color:#fff;
+    background-color:dodgerblue;
+    color:#fff;
 }
 .person-id_woman {
-background-color:palevioletred;
-color:#fff;
+    background-color:palevioletred;
+    color:#fff;
 
 }
 
 .chekpoint{
     text-align: center;
     background-color:Lightblue;
-    padding:2px
+    padding:2px;
+    height: 120px;
 
 }
 
 .chek{
     background-color:#7FF7A0;
-   
-}
-.person-id__id{
-    position: absolute;    
-    left:10px;
-    
-}
-.wrapper-id{
-    position: absolute;
-    width:100%;
-    height:80%;
-    top:10%;
-    
-}
-
- .chek:before {
-    content:"\2713";
-    font-size:20px;
-} 
-.unchek:before {
-    content:"\2718";
-     font-size:20px;
-
 }
 
 .unchek {
     background-color:red;
     color:#fff;
 }
+
+.person-id__id{
+    position: absolute;
+    left:10px;
+}
+/*.wrapper-id{*/
+/*    position: absolute;*/
+/*    width:100%;*/
+/*    height:80%;*/
+/*    top:10%;*/
+
+/*}*/
+
+.chek:before {
+    content:"\2713";
+    font-size:20px;
+}
+.unchek:before {
+    content:"\2718";
+    font-size:20px;
+
+}
+
+.person-data_chek {
+    border:3px solid red
+}
 .unchek-block {
-     background-color:  tomato; 
+    background-color:  tomato;
 }
 .title {
     font-size:20px;
@@ -151,7 +165,15 @@ color:#fff;
 
 
 .btn {
-    
+    border:0;
+    background-color:Lightblue;
+    font-size:20px;
+    padding: 4px;
+    text-transform: uppercase;
+    cursor:pointer;
+}
+
+#generateBtn {
     border:0;
     background-color:Lightblue;
     font-size:20px;
@@ -164,9 +186,9 @@ color:#fff;
     background-color:#641818;
     color:#fff;
     width:100px;
-   position: relative;
-   left:50%;
-   transform: translate(-50% , 0)
+    position: relative;
+    left:50%;
+    transform: translate(-50% , 0)
 }
 
 .img{
@@ -178,7 +200,7 @@ color:#fff;
     top:25%;
 }
 
-        
+
 .man{
     position: relative;
     left:0;
@@ -211,7 +233,7 @@ color:#fff;
     cursor:pointer;
 }
 .addPersonForm {
-   
+
     position:absolute;
     transform:translate(-50%, -50%);
     top:50%;
