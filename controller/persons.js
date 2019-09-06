@@ -46,6 +46,7 @@ class Persons {
 
     createPersonByInput(obj) {
         let person = {};
+
         person.name = obj.name;
         person.gender = obj.gender;
         person.id = faker.random.uuid();

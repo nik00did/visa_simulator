@@ -7,10 +7,7 @@ class View {
         this.clearPersons = document.getElementById('clearBtn');
         this.startCheck = document.getElementById('startBtn');
         this.quantityOfPersons = document.getElementById('quantityOfPersons');
-        // this.updateSettings = document.getElementById('updateSettingsBtn');
-        // this.updateValidator = document.getElementById('updateValidatorBtn');
 
-        //Input person form
         this.firstNameInput = document.getElementById('firstNameInput');
         this.lastNameInput = document.getElementById('lastNameInput');
         this.genderInputMale = document.getElementById('genderInputMale');
@@ -20,7 +17,6 @@ class View {
         this.healthInput = document.getElementById('healthInput');
         this.hasPassportInput = document.getElementById('hasPassportInput');
 
-        //Settings form
         this.manMinAgeInput = document.getElementById('manMinAgeInput');
         this.manMaxAgeInput = document.getElementById('manMaxAgeInput');
         this.manMinBankAmountInput = document.getElementById('manMinBankAmountInput');
@@ -35,7 +31,6 @@ class View {
         this.womanMinHealthInput = document.getElementById('womanMinHealthInput');
         this.womanMaxHealthInput = document.getElementById('womanMaxHealthInput');
 
-        //Validator form
         this.manMinAgeValidator = document.getElementById('manMinAgeValidator');
         this.manMaxAgeValidator = document.getElementById('manMaxAgeValidator');
         this.manMinBankAmountValidator = document.getElementById('manMinBankAmountValidator');
@@ -50,7 +45,7 @@ class View {
         this.womanMinHealthValidator = document.getElementById('womanMinHealthValidator');
         this.womanMaxHealthValidator = document.getElementById('womanMaxHealthValidator');
         this.personData = document.getElementsByClassName("person-data")
-        //Check Table
+
         this.tableBody = document.getElementById('content');
         this.top = 0;
     }
@@ -133,11 +128,9 @@ class View {
 
     renderCheckTable(storePersons) {
         this.tableBody.innerHTML = storePersons.map(person => this.renderCheckTableRow(person)).join(`</br>`);
-
     }
 
     renderStatusApproved(id, type) {
-
         let field = document.getElementById(`${type}${id}`);
         field.classList.toggle("chek");
     }
@@ -149,7 +142,7 @@ class View {
 
     renderRowApproved(id) {
         let row = document.getElementById(`${id}`);
-        row.classList.toggle("person-data_chek")
+        row.classList.toggle("person-data_chek");
     }
 
     renderRowReject(id) {
@@ -159,5 +152,4 @@ class View {
     renderWinner(id) {
 
     }
-
 }

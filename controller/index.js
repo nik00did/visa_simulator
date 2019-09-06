@@ -7,7 +7,6 @@ class App {
     init() {
         const settings = store.getSettings();
         const validator = store.getValidator();
-
         const method = event => {
             switch(event.target.id) {
                 case 'generateBtn':
@@ -25,70 +24,25 @@ class App {
                         womanMinHealth: parseInt(this.view.womanMinHealthInput.value),
                         womanMaxHealth: parseInt(this.view.womanMaxHealthInput.value)
                     };
-                    store.setSettings(newSettings);
-                    let settings = store.getSettings();
 
+                    store.setSettings(newSettings);
+
+                    let settings = store.getSettings();
                     let newPersons = this.persons.generatePersons(this.view.quantityOfPersons.value, settings);
-                    //let newPersons = store.getPersons().length ? [store.getPersons(), ...this.persons.generatePersons(this.view.quantityOfPersons.value, settings)] : this.persons.generatePersons(this.view.quantityOfPersons.value, settings);
-                    console.log(newPersons)
+
                     store.setPersons(newPersons);
                     this.view.renderCheckTable(newPersons);
-                    break;
-                // case 'updateSettingsBtn':
-                //     let newSettings = {
-                //         manMinAge: this.view.manMinAgeInput.value,
-                //         manMaxAge: this.view.manMaxAgeInput.value,
-                //         manMinBankAmount: this.view.manMinBankAmountInput.value,
-                //         manMaxBankAmount: this.view.manMaxBankAmountInput.value,
-                //         manMinHealth: this.view.manMinHealthInput.value,
-                //         manMaxHealth: this.view.manMaxHealthInput.value,
-                //         womanMinAge: this.view.womanMinAgeInput.value,
-                //         womanMaxAge: this.view.womanMaxAgeInput.value,
-                //         womanMinBankAmount: this.view.womanMinBankAmountInput.value,
-                //         womanMaxBankAmount: this.view.womanMaxBankAmountInput.value,
-                //         womanMinHealth: this.view.womanMinHealthInput.value,
-                //         womanMaxHealth: this.view.womanMaxHealthInput.value
-                //     };
-                //     store.setSettings(newSettings);
-                //     break;
-                // case 'updateValidatorBtn':
-                //     let newValidator = {
-                //         manMinAge: this.view.manMinAgeValidator.value,
-                //         manMaxAge: this.view.manMaxAgeValidator.value,
-                //         manMinBankAmount: this.view.manMinBankAmountValidator.value,
-                //         manMaxBankAmount: this.view.manMaxBankAmountValidator.value,
-                //         manMinHealth: this.view.manMinHealthValidator.value,
-                //         manMaxHealth: this.view.manMaxHealthValidator.value,
-                //         womanMinAge: this.view.womanMinAgeValidator.value,
-                //         womanMaxAge: this.view.womanMaxAgeValidator.value,
-                //         womanMinBankAmount: this.view.womanMinBankAmountValidator.value,
-                //         womanMaxBankAmount: this.view.womanMaxBankAmountValidator.value,
-                //         womanMinHealth: this.view.womanMinHealthValidator.value,
-                //         womanMaxHealth: this.view.womanMaxHealthValidator.value
-                //     };
-                //     store.setValidator(newValidator);
-                //     console.log(newValidator)
-                //     break;
+                break;
                 case 'addPersonByInput':
                     let gender = this.view.genderInputMale.checked ? "male" : "female";
                     let person = new Person(faker.random.uuid(), this.view.firstNameInput.value, this.view.lastNameInput.value, gender, this.view.ageInput.value, this.view.bankAmountInput.value, this.view.healthInput.value, this.view.hasPassportInput.checked === true)
 
-                    // let personData = {
-                    //     name: this.view.firstNameInput.value + ' ' + this.view.lastNameInput.value,
-                    //     gender: this.view.genderInput.value,
-                    //     age: this.view.ageInput.value,
-                    //     amount: this.view.bankAmountInput.value,
-                    //     health: this.view.healthInput.value,
-                    //     hasPassport: this.view.hasPassportInput.value === 'true'
-                    // };
-                    // const newPerson = this.persons.createPersonByInput(personData);
                     store.addPersonByInput(person);
+
                     let persons = store.getPersons();
+
                     this.view.renderCheckTable(persons);
-
-
-                    //здесь то что будет по клику кнопки add
-                    break;
+                break;
                 case 'startBtn':
                     let newValidator = {
                         manMinAge: this.view.manMinAgeValidator.value,
@@ -108,17 +62,11 @@ class App {
                     store.getValidator();
 
                     runСheck();
-
                     break;
                 case 'clearBtn':
-                    console.log(this.view.personData.length);
-
-
                     this.view.tableBody.innerHTML="";
-
-
                     store.clearStore();
-                    break;
+                break;
                 default:
                     return;
             }
