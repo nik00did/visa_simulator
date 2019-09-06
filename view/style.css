@@ -139,9 +139,6 @@ h3{
 
 }
 
-.person-data_chek {
-    border:3px solid red
-}
 .unchek-block {
     background-color:  tomato;
 }
@@ -239,4 +236,15 @@ h3{
 
 .visible{
     display:none;
+}
+
+.person-data_chek {
+    border:10px solid #7FF7A0;
+}
+
+.person-data_unchek {
+    border:10px solid tomato;
+}
+.person-data_winner {
+    border:10px solid #00BFFF;
 }
