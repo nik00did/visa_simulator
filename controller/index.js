@@ -5,6 +5,14 @@ class App {
     }
 
     init() {
+        const validInputs = () => {
+            for (let i = 0; i < this.view.dataInput.length; i++) {
+                this.view.dataInput[i].setAttribute("oninput", `validity.valid||(value='')`);
+            }
+        };
+
+        validInputs();
+
         const settings = store.getSettings();
         const validator = store.getValidator();
         const method = event => {

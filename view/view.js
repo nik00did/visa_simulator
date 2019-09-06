@@ -44,10 +44,12 @@ class View {
         this.womanMaxBankAmountValidator = document.getElementById('womanMaxBankAmountValidator');
         this.womanMinHealthValidator = document.getElementById('womanMinHealthValidator');
         this.womanMaxHealthValidator = document.getElementById('womanMaxHealthValidator');
-        this.personData = document.getElementsByClassName("person-data")
+        this.personData = document.getElementsByClassName("person-data");
 
         this.tableBody = document.getElementById('content');
         this.top = 0;
+
+        this.dataInput = document.getElementsByClassName("data-input__input");
     }
 
     renderCheckTableRow(person) {
@@ -131,25 +133,29 @@ class View {
     }
 
     renderStatusApproved(id, type) {
+
         let field = document.getElementById(`${type}${id}`);
         field.classList.toggle("chek");
     }
 
     renderStatusRejected(id, type) {
+
         let field= document.getElementById(`${type}${id}`);
-        field.className = "unchek";
+        field.classList.toggle("unchek")
     }
 
     renderRowApproved(id) {
         let row = document.getElementById(`${id}`);
-        row.classList.toggle("person-data_chek");
+        row.classList.add("person-data_chek")
     }
 
     renderRowReject(id) {
-
+        let row = document.getElementById(`${id}`);
+        row.classList.add("person-data_unchek")
     }
 
     renderWinner(id) {
-
+        let row = document.getElementById(`${id}`);
+        row.classList.add("person-data_winner")
     }
 }

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="setting" >
+    <div id="setting">
         <h3>Random persons setting</h3>
         <hr>
         <h4>Men:</h4>
@@ -28,11 +28,11 @@
         </div>
         <div class="data-input">
             <label for="manMinHealthInput">min health</label>
-            <input id="manMinHealthInput" type="number" class="data-input__input data-input__input_number" min="0" max="100">
+            <input id="manMinHealthInput" type="number" class="data-input__input data-input__input_number" min="1" max="100">
         </div>
         <div class="data-input">
             <label for="manMaxHealthInput">max health</label>
-            <input id="manMaxHealthInput" type="number" class="data-input__input data-input__input_number" min="0" max="100">
+            <input id="manMaxHealthInput" type="number" class="data-input__input data-input__input_number" min="1" max="100">
         </div>
         <br>
         <hr>
@@ -55,15 +55,15 @@
         </div>
         <div class="data-input">
             <label for="womanMinHealthInput">min health</label>
-            <input id="womanMinHealthInput" type="number" class="data-input__input data-input__input_number"  min="0" max="100">
+            <input id="womanMinHealthInput" type="number" class="data-input__input data-input__input_number"  min="1" max="100">
         </div>
         <div class="data-input">
             <label for="womanMaxHealthInput">max health</label>
-            <input id="womanMaxHealthInput" type="number" class="data-input__input data-input__input_number" min="0" max="100">
+            <input id="womanMaxHealthInput" type="number" class="data-input__input data-input__input_number" min="1" max="100">
         </div>
         <div class="data-input">
             <label for="quantityOfPersons">quantity of persons</label>
-            <input id="quantityOfPersons" type="number" class="data-input__input data-input__input_number" min="0" max="100">
+            <input id="quantityOfPersons" type="number" class="data-input__input data-input__input_number" min="1" max="100">
         </div>
         <br>
         <hr>
@@ -93,11 +93,11 @@
         </div>
         <div class="data-input">
             <label for="manMinHealthValidator">min health</label>
-            <input id="manMinHealthValidator" type="number" class="data-input__input data-input__input_number" min="0" max="100">
+            <input id="manMinHealthValidator" type="number" class="data-input__input data-input__input_number" min="1" max="100">
         </div>
         <div class="data-input">
             <label for="manMaxHealthValidator">max health</label>
-            <input id="manMaxHealthValidator" type="number" class="data-input__input data-input__input_number" min="0" max="100">
+            <input id="manMaxHealthValidator" type="number" class="data-input__input data-input__input_number" min="1" max="100">
         </div>
         <br>
         <h4>Women:</h4>
@@ -119,16 +119,17 @@
         </div>
         <div class="data-input">
             <label for="womanMinHealthValidator">min health</label>
-            <input id="womanMinHealthValidator" type="number" class="data-input__input data-input__input_number" min="0" max="100">
+            <input id="womanMinHealthValidator" type="number" class="data-input__input data-input__input_number" min="1" max="100">
         </div>
         <div class="data-input">
             <label for="womanMaxHealthValidator">max health</label>
-            <input id="womanMaxHealthValidator" type="number" class="data-input__input data-input__input_number" min="0" max="100">
+            <input id="womanMaxHealthValidator" type="number" class="data-input__input data-input__input_number" min="1" max="100">
         </div>
         <br>
         <hr>
         <button class="btn" id="startBtn">Start Check</button>
         <button id="clearBtn" class="btn">Clear All</button>
+        <!--        <button id="updateValidatorBtn">UPDATE</button>-->
     </div>
 
     <div id="modal" class="visible"> </div>
@@ -138,6 +139,7 @@
         <img src="../img/avatar.png" alt="" class="img">
 
         <h3 class="modal-title">Enter person details</h3>
+
         <label for="firstNameInput">Name</label><br>
         <input type="text" id="firstNameInput" maxlength="16" placeholder="Your name" class="input"><br>
 
@@ -151,17 +153,16 @@
         <label for="genderInputFemale">Woman</label><br>
 
         <label for="ageInput">Age</label>
-        <input id="ageInput" type="number" class="input input-number" onkeypress="return false" max="99"><br>
+        <input id="ageInput" type="number" class="input input-number data-input__input" min="1" max="99"><br>
 
         <label for="bankAmountInput">Bank Amount</label>
-        <input id="bankAmountInput" type="number" class="input input_amount" min="1" max="1000000"><br>
+        <input id="bankAmountInput" type="number" class="input input_amount data-input__input" min="1" max="1000000"><br>
 
         <label for="healthInput">Health Status</label>
-        <input id="healthInput" type="number" class="input input-number" max="99"><br>
+        <input id="healthInput" type="number" class="input input-number data-input__input" min="1" max="99"><br>
 
         <input id="hasPassportInput" type="checkbox" class="input input-radio"  name="haspasport">
-        <label for="hasPassportInput">Has Pasport</label><br>
-
+        <label for="hasPassportInput">Has Passport</label><br>
         <div>
             <button id="addPersonByInput" class="addPerson">OK</button>
         </div>

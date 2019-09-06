@@ -9,12 +9,14 @@ body{
     background-attachment:fixed;
     font-family: Arial, Helvetica, sans-serif;
     font-size:25px;
+
 }
 
 h3{
     text-align: center;
     font-size:25px;
     text-transform: uppercase;
+
 }
 
 .content{
@@ -36,7 +38,6 @@ h3{
     padding: 10px;
     border-radius: 5px;
 }
-
 #validate{
     position: fixed;
     right:0;
@@ -54,21 +55,20 @@ h3{
     outline: none;
     border-radius: 2px;
 }
-
 .data-input__input_number {
     width:40px;
 }
-
 .data-input__input_amount {
     width:40%;
 }
-
 .input-number_age{
     width:40px;
 }
-
 .data-input__input:focus{
     border:1px solid #00BFFF;
+}
+.data-input__input:invalid {
+    border: 1px solid red;
 }
 
 .person-data{
@@ -81,12 +81,13 @@ h3{
     justify-content:space-between;
     transform:translate(-50%);
     display:flex;
+    border:10px solid transparent;
 }
 
-.person-data__block{
-    width:22%;
-    margin:0;
-    padding:0;
+.person-data__block {
+    width: 22%;
+    margin: 0;
+    padding: 0;
     height: 115px;
     display: flex;
     flex-direction: column;
@@ -112,7 +113,6 @@ h3{
     background-color:Lightblue;
     padding:2px;
     height: 120px;
-
 }
 
 .chek{
@@ -139,9 +139,22 @@ h3{
 
 }
 
+.person-data_chek {
+    border:10px solid green;
+}
+
+.person-data_unchek {
+    border:10px solid red;
+}
+
+.person-data_winner {
+    border:10px solid violet;
+}
+
 .unchek-block {
     background-color:  tomato;
 }
+
 .title {
     font-size:20px;
     text-align:center;
@@ -149,7 +162,6 @@ h3{
     color:#fff;
     text-transform:uppercase;
 }
-
 
 .btn {
     border:0;
@@ -175,7 +187,7 @@ h3{
     width:100px;
     position: relative;
     left:50%;
-    transform: translate(-50% , 0)
+    transform: translate(-50%, 0);
 }
 
 .img{
@@ -186,7 +198,6 @@ h3{
     left:61%;
     top:25%;
 }
-
 
 .man{
     position: relative;
@@ -220,7 +231,6 @@ h3{
     cursor:pointer;
 }
 .addPersonForm {
-
     position:absolute;
     transform:translate(-50%, -50%);
     top:50%;
@@ -236,15 +246,4 @@ h3{
 
 .visible{
     display:none;
-}
-
-.person-data_chek {
-    border:10px solid #7FF7A0;
-}
-
-.person-data_unchek {
-    border:10px solid tomato;
-}
-.person-data_winner {
-    border:10px solid #00BFFF;
 }

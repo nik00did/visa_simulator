@@ -1,183 +1,145 @@
-const validator = store.getValidator();
-const {
-    manMinAge,
-    manMaxAge,
-    manMinBankAmount,
-    manMaxBankAmount,
-    manMinHealth,
-    manMaxHealth,
-    womanMinAge,
-    womanMaxAge,
-    womanMinBankAmount,
-    womanMaxBankAmount,
-    womanMinHealth,
-    womanMaxHealth
-} = validator;
-
 const randomTime = () =>{
     return Math.floor(Math.random() * (12000 - 1000) + 1000);
-}
+};
 
 const checkPassportAge = person => {
-
     return new Promise((resolve, reject) => {
-        //console.log('start checkPassportAge' + person.id)
-
         setTimeout(() => {
             if (person.gender === 'male') {
-                if (person.age >= manMinAge && person.age <= manMaxAge) {
+                if (person.age >= store.getValidator().manMinAge && person.age <= store.getValidator().manMaxAge) {
                     resolve('PassportAge')
                 } else {
                     reject('PassportAge')
                 }
             } else if (person.gender === 'female') {
-                if (person.age >= womanMinAge && person.age <= womanMaxAge) {
-                    resolve('PassportAge')
+                if (person.age >= store.getValidator().womanMinAge && person.age <= store.getValidator().womanMaxAge) {
+                    resolve('PassportAge');
                 } else {
-                    reject('PassportAge')
+                    reject('PassportAge');
                 }
             }
-        }, randomTime())
+        }, randomTime());
     })
 };
 
-
 const checkPassportHasPassport = person => {
-    //console.log('start checkPassportHasPassport' + person.id)
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (person.hasPassport === true) {
-                resolve('PassportHasPassport')
+                resolve('PassportHasPassport');
             } else {
-                reject('PassportHasPassport')
+                reject('PassportHasPassport');
             }
-        }, randomTime())
+        }, randomTime());
     })
 };
-
 
 const checkHospitalHealth = person => {
-    //console.log('start checkHospitalHealth' + person.id)
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (person.gender === 'male') {
-                if (person.health >= manMinHealth && person.health <= manMaxHealth) {
-                    resolve('HospitalHealth')
+                if (person.health >= store.getValidator().manMinHealth && person.health <= store.getValidator().manMaxHealth) {
+                    resolve('HospitalHealth');
                 } else {
-                    reject('HospitalHealth')
+                    reject('HospitalHealth');
                 }
             } else if (person.gender === 'female') {
-                if (person.health >= womanMinHealth && person.age <= womanMaxHealth) {
-                    resolve('HospitalHealth')
+                if (person.health >= store.getValidator().womanMinHealth && person.age <= store.getValidator().womanMaxHealth) {
+                    resolve('HospitalHealth');
                 } else {
-                    reject('HospitalHealth')
+                    reject('HospitalHealth');
                 }
             }
-        }, randomTime())
+        }, randomTime());
     })
 };
 
-
-
-
 const checkHospitalAge = person => {
-
     return new Promise((resolve, reject) => {
-        //console.log('start checkHospitalAge' + person.id)
         setTimeout(() => {
             if (person.gender === 'male') {
-                if (person.age >= manMinAge && person.age <= manMaxAge) {
-                    resolve('HospitalAge')
+                if (person.age >= store.getValidator().manMinAge && person.age <= store.getValidator().manMaxAge) {
+                    resolve('HospitalAge');
                 } else {
-                    reject('HospitalAge')
+                    reject('HospitalAge');
                 }
             } else if (person.gender === 'female') {
-                if (person.age >= womanMinAge && person.age <= womanMaxAge) {
-                    resolve('HospitalAge')
+                if (person.age >= store.getValidator().womanMinAge && person.age <= store.getValidator().womanMaxAge) {
+                    resolve('HospitalAge');
                 } else {
-                    reject(person.id, 'HospitalAge')
+                    reject('HospitalAge');
                 }
             }
-        }, randomTime())
+        }, randomTime());
     })
 };
 
 
 
 const checkHospitalHasPassport = person => {
-    //console.log('start checkHospitalHasPassport' + person.id)
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (person.hasPassport === true) {
-                resolve('HospitalHasPassport')
+            if (person.hasPassport) {
+                resolve('HospitalHasPassport');
             } else {
-                reject('HospitalHasPassport')
+                reject('HospitalHasPassport');
             }
-        }, randomTime())
+        }, randomTime());
     })
 };
 
 
 const checkBankAge = person => {
-
     return new Promise((resolve, reject) => {
-        //console.log('start checkBankAge' + person.id)
         setTimeout(() => {
             if (person.gender === 'male') {
-                if (person.age >= manMinAge && person.age <= manMaxAge) {
-                    resolve('BankAge')
+                if (person.age >= store.getValidator().manMinAge && person.age <= store.getValidator().manMaxAge) {
+                    resolve('BankAge');
                 } else {
-                    reject('BankAge')
+                    reject('BankAge');
                 }
             } else if (person.gender === 'female') {
-                if (person.age >= womanMinAge && person.age <= womanMaxAge) {
-                    resolve('BankAge')
+                if (person.age >= store.getValidator().womanMinAge && person.age <= store.getValidator().womanMaxAge) {
+                    resolve('BankAge');
                 } else {
-                    reject('BankAge')
+                    reject('BankAge');
                 }
             }
-        }, randomTime())
+        }, randomTime());
     })
 };
 
-
-
 const checkBankAmount = person => {
-
     return new Promise((resolve, reject) => {
-        //console.log('start checkBankAmount' + person.id)
         setTimeout(() => {
             if (person.gender === 'male') {
-                if (person.bankAccount >= manMinBankAmount && person.age <= manMaxBankAmount) {
+                if (person.bankAccount >= store.getValidator().manMinBankAmount && person.age <= store.getValidator().manMaxBankAmount) {
                     resolve('BankAmount')
                 } else {
                     reject('BankAmount')
                 }
             } else if (person.gender === 'female') {
-                if (person.bankAccount >= womanMinBankAmount && person.age <= womanMaxBankAmount) {
+                if (person.bankAccount >= store.getValidator().womanMinBankAmount && person.age <= store.getValidator().womanMaxBankAmount) {
                     resolve( 'BankAmount')
                 } else {
                     reject('BankAmount')
                 }
             }
-        }, randomTime())
+        }, randomTime());
     })
 };
 
-
 const checkBankHasPassport = person => {
-    // console.log('start checkBankHasPassport' + person.id)
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (person.hasPassport === true) {
+            if (person.hasPassport) {
                 resolve('BankHasPassport')
             } else {
                 reject('BankHasPassport')
             }
-        }, randomTime())
+        }, randomTime());
     })
 };
-
 
 const verifyPassportPromise = person => {
     return new Promise((resolve, reject) => {
@@ -187,7 +149,7 @@ const verifyPassportPromise = person => {
             .then(response => app.view.renderStatusApproved(person.id, response))
             .then(response => resolve(person.id))
             .catch(error => {
-                app.view.renderStatusRejected(person.id, error)
+                app.view.renderStatusRejected(person.id, error);
                 reject(person.id + error);
             });
     })
@@ -203,7 +165,7 @@ const verifyHospitalPromise = person => {
             .then(response => app.view.renderStatusApproved(person.id, response))
             .then(response => resolve(person.id))
             .catch(error => {
-                app.view.renderStatusRejected(person.id, error)
+                app.view.renderStatusRejected(person.id, error);
                 reject(person.id + error);
             });
     })
@@ -219,7 +181,7 @@ const verifyBankPromise = person => {
             .then(response => app.view.renderStatusApproved(person.id, response))
             .then(response => resolve(person.id))
             .catch(error => {
-                app.view.renderStatusRejected(person.id, error)
+                app.view.renderStatusRejected(person.id, error);
                 reject(person.id);
             });
     })
@@ -232,45 +194,22 @@ const verifyAllPromise = person => {
         verifyPassportPromise(person),
         verifyHospitalPromise(person),
         verifyBankPromise(person)
-
     ])
-        .then((response) => {
-            app.view.renderRowApproved(person.id);
-
+        .then(() => {
+            if (!winner) {
+                winner = person.id;
+                app.view.renderWinner(winner)
+            } else {
+                app.view.renderRowApproved(person.id)
+            }
         })
-        .catch(() => app.view.renderRowReject(person.id))
+        .catch(() => app.view.renderRowReject(person.id));
 };
-
-
 
 const runСheck = () => {
     winner = null;
+
     for (let i = 0; i < store.getPersons().length; i++) {
-        let first = [];
-        first.push(verifyAllPromise(store.getPersons()[i]));
-
-        //Promise.race()
-
-        // console.log("////", store.getPersons()[i])
-        //app.view.renderWinner(person.id)
+        verifyAllPromise(store.getPersons()[i]);
     }
 };
-
-// {name: "sdfs sfs", gender: "man", id: "751299c6-5404-4ae6-a51d-0b96184d7274", age: "26", amount: "1000", hasPassport: true}
-
-
-
-
-// let person = {name: "sdfs sfs", gender: "female", id: "751299c6-5404-4ae6-a51d-0b96184d7274", age: "50", amount: "100", hasPassport: true, health: 20};
-// let person2 = {name: "sdfs sfs", gender: "female", id: "751299c6-5404-4ae6-a51d-0b96184d7274", age: "50", amount: "1000", hasPassport: false, health: 20};
-// checkBankHasPassport(person).then(res => console.log('+', res)).catch(err =>  console.log('-', err));
-// checkBankHasPassport(person2).then(res => console.log('+', res)).catch(err =>  console.log('-', err));
-
-
-// checkPassportAge(store.getPersons()[0])
-// .then(response => {
-//     console.log(response)
-// })
-// .catch(error => {
-//     console.log('error')
-// });
